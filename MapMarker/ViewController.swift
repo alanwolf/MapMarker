@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
+// comment to show github change
+
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
     @IBOutlet weak var mapview :MKMapView?
     var locationManager :CLLocationManager = CLLocationManager()
@@ -38,7 +40,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
 
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation){
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 100,100)
+        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 250,250)
         self.mapview!.setRegion(region, animated: true)
     }
 
